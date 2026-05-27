@@ -35,7 +35,7 @@ export default function ProductPagesSideGallery({
 
       {/* THUMBNAILS */}
       <div
-        className={`flex flex-row p-0.5 xl:flex-col gap-4 xl:w-32 shrink-0 order-2 xl:order-1 
+        className={`flex flex-row xl:flex-col gap-4 xl:w-32 shrink-0 order-2 xl:order-1 
   overflow-x-auto xl:overflow-visible ${
     isTwoImages ? "justify-start xl:justify-start" : ""
   }`}
@@ -45,7 +45,7 @@ export default function ProductPagesSideGallery({
             key={`${img}-${index}`}
             type="button"
             onClick={() => setSelectedImage(img)}
-            className={`relative aspect-square overflow-hidden ring ring-border-primary shrink-0
+            className={`relative aspect-square overflow-hidden ringed-full shrink-0
     ${isTwoImages ? "w-1/3 xl:w-full flex-none" : "flex-1 xl:w-full"}`}
           >
             <Image

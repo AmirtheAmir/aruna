@@ -61,7 +61,7 @@ export default function ProductCard({
         <div className="relative flex flex-col">
           <div
             className={[
-              "relative overflow-hidden bg-transparent transition-all duration-300 group-hover:ring-border-primary",
+              "relative overflow-hidden bg-transparent transition-all duration-300 group-hover:ringed-full",
               compact
                 ? "w-22 h-22"
                 : "w-full aspect-417/417 ring-1 ring-transparent",

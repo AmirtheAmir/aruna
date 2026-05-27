@@ -198,6 +198,11 @@
 .ringed-left {
   border-left: 1px solid var(--sand-dark-400);
 }
+.ringed-full{
+  border: 1px solid var(--sand-dark-400);
+}
 
-
+.group:hover .group-hover\:ringed-full {
+  border: 1px solid var(--sand-dark-400);
+}
 
