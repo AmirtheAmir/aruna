@@ -1,6 +1,6 @@
-# Altvue
+# Aruna
 
-Altvue is a collectible toy e-commerce website built for the Aruna collection. The site presents premium collectible products through a clean storefront experience with collection browsing, product detail pages, search, cart, checkout, account management, newsletter signup, and policy pages.
+Aruna is a collectible toy e-commerce website built for the Aruna collection. The site presents premium collectible products through a clean storefront experience with collection browsing, product detail pages, search, cart, checkout, account management, newsletter signup, and policy pages.
 
 The app lets users explore curated categories such as all products, collector-focused releases, motorsports models, Batman, Speed Racer, and Ferrari products. Visitors can search products by name or tag, filter results, switch currencies, add items to cart, review checkout totals, and manage a profile with saved delivery addresses.
 
@@ -10,7 +10,7 @@ The app lets users explore curated categories such as all products, collector-fo
 
 # Overview
 
-Altvue was built to turn a collectible toy catalog into a complete online shopping experience. Instead of showing products as a static gallery, the project gives collectors a practical way to browse, compare, search, and prepare purchases from one responsive interface.
+Aruna was built to turn a collectible toy catalog into a complete online shopping experience. Instead of showing products as a static gallery, the project gives collectors a practical way to browse, compare, search, and prepare purchases from one responsive interface.
 
 The problem it solves is the gap between product presentation and real store behavior. A collectible store needs more than nice images: customers need categories, accurate availability, searchable inventory, clear product pages, cart persistence, checkout pricing, shipping information, account details, and store policies. Altvue brings those pieces together in one polished Next.js application.
 
