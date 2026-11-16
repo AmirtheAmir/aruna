@@ -1,8 +1,6 @@
 # Aruna
 
-<<<<<<< HEAD
-Aruna is a collectible toy e-commerce website built for the Aruna collection. The site presents premium collectible products through a clean storefront experience with collection browsing, product detail pages, search, cart, checkout, account management, newsletter signup, and policy pages.
-=======
+Aruna is a collectible toy storefront built with Next.js, React, and Supabase. It supports collection browsing, product search, a session-persisted cart, email OTP authentication, saved addresses, and a checkout preview with shipping, discount, and tax calculations.
 
 [Live Demo](https://arunacollection.vercel.app)
 
@@ -12,11 +10,7 @@ Aruna helps collectors explore toy and model collections, inspect product detail
 
 Supabase provides catalog data, product images, authentication, profiles, saved addresses, newsletter subscriptions, and policy content. Checkout presents address and payment forms with calculated totals; payment processing and order creation are not implemented, and the orders tab displays an empty state.
 
-<<<<<<< HEAD
-Aruna was built to turn a collectible toy catalog into a complete online shopping experience. Instead of showing products as a static gallery, the project gives collectors a practical way to browse, compare, search, and prepare purchases from one responsive interface.
-=======
 ## Key Features
->>>>>>> 7272dd0 (updated readme files)
 
 - **Collections and Product Details:** Browse Classics, Modern, Batman, Speed Racer, and Ferrari collections, with image galleries, descriptions, pricing, and sold-out states.
 - **Search and Filtering:** Search product names and tags, preview matching products and tag suggestions, filter results by availability and price range, and sort by price.
