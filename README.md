@@ -53,8 +53,8 @@ Aruna was built to turn a collectible toy catalog into a complete online shoppin
 ### Clone Repository
 
 ```bash
-git clone https://github.com/AmirtheAmir/ace.shop.boutique.git
-cd ace.shop.boutique
+git clone https://github.com/AmirtheAmir/aruna.git
+cd aruna
 ```
 
 ### Install Dependencies
