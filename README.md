@@ -1,67 +1,64 @@
 # Aruna
 
+<<<<<<< HEAD
 Aruna is a collectible toy e-commerce website built for the Aruna collection. The site presents premium collectible products through a clean storefront experience with collection browsing, product detail pages, search, cart, checkout, account management, newsletter signup, and policy pages.
+=======
 
-The app lets users explore curated categories such as all products, collector-focused releases, motorsports models, Batman, Speed Racer, and Ferrari products. Visitors can search products by name or tag, filter results, switch currencies, add items to cart, review checkout totals, and manage a profile with saved delivery addresses.
+[Live Demo](https://arunacollection.vercel.app)
 
-# Live Demo
+## Overview
 
-[https://arunacollection.vercel.app](https://arunacollection.vercel.app)
+Aruna helps collectors explore toy and model collections, inspect product details and availability, and organize items for purchase. Collection pages, searchable inventory, and product galleries connect catalog browsing with cart management.
 
-# Overview
+Supabase provides catalog data, product images, authentication, profiles, saved addresses, newsletter subscriptions, and policy content. Checkout presents address and payment forms with calculated totals; payment processing and order creation are not implemented, and the orders tab displays an empty state.
 
+<<<<<<< HEAD
 Aruna was built to turn a collectible toy catalog into a complete online shopping experience. Instead of showing products as a static gallery, the project gives collectors a practical way to browse, compare, search, and prepare purchases from one responsive interface.
+=======
+## Key Features
+>>>>>>> 7272dd0 (updated readme files)
 
-The problem it solves is the gap between product presentation and real store behavior. A collectible store needs more than nice images: customers need categories, accurate availability, searchable inventory, clear product pages, cart persistence, checkout pricing, shipping information, account details, and store policies. Altvue brings those pieces together in one polished Next.js application.
+- **Collections and Product Details:** Browse Classics, Modern, Batman, Speed Racer, and Ferrari collections, with image galleries, descriptions, pricing, and sold-out states.
+- **Search and Filtering:** Search product names and tags, preview matching products and tag suggestions, filter results by availability and price range, and sort by price.
+- **Session Cart:** Add products, adjust quantities, remove items, and review totals, with cart contents retained in sessionStorage and synchronized cart counts.
+- **Checkout Preview:** Enter shipping and billing details or select saved addresses, apply predefined discount codes, and view shipping estimates for Finland or Australia with estimated tax.
+- **Authentication and Accounts:** Sign up or sign in using Supabase email OTP, edit profile details, and add, edit, or delete up to four addresses with a default address selection.
+- **Currency Selection:** Search available countries and currencies and convert displayed catalog prices using fixed client-side exchange rates.
+- **Newsletter and Policies:** Submit newsletter subscriptions with email validation and duplicate handling, and read database-backed refund, privacy, shipping, terms, and cookie policies.
 
-# Features
+## Tech Stack
 
-- **Responsive storefront:** A home page with a hero banner, featured product grid, collection entry points, and newsletter signup.
-- **Collection browsing:** Dedicated collection pages for All, Classics, Modern, Batman, Speed Racer, and Ferrari products.
-- **Product search:** Search results page that matches products by name and tags.
-- **Filtering and sorting:** Availability filters, price filters on search results, result counts, removable filter chips, and price sorting from low to high or high to low.
-- **Product detail pages:** Product gallery, product name, current price, old price, sold-out state, quantity selector, description, feature list, and add-to-cart overlay.
-- **Cart system:** Session-based cart storage with quantity updates, item removal, cart count updates, and cart total calculation.
-- **Checkout flow:** Checkout page with cart summary, discount codes, estimated tax, shipping calculation, shipping address fields, saved address selection, billing address option, credit card fields, and PayPal option.
-- **User authentication:** Supabase email OTP sign up and sign in flow.
-- **Account area:** Profile display/editing, saved addresses, default address handling, address add/edit/delete modals, and an orders tab.
-- **Multi-currency support:** Currency selector with searchable country/currency list and client-side price conversion.
-- **Newsletter signup:** API route for email subscription storage with validation and duplicate handling.
-- **Policy pages:** Refund, privacy, shipping, terms, and cookie policy pages powered by Supabase policy data.
-- **Responsive navigation:** Desktop dropdown navigation, mobile menu, search mode, account-aware navigation, route loading overlay, and cart badge updates.
-- **Analytics:** Vercel Analytics integration for deployed usage tracking.
-
-# Tech Stack
-
-- **Framework:** Next.js 16 with the App Router
-- **UI:** React 19, TypeScript, Tailwind CSS 4
-- **Backend/Data:** Supabase database, Supabase Auth, Supabase Storage
-- **API:** Next.js route handlers for products, policies, and newsletter subscriptions
-- **State:** React state/context, custom cart helpers, sessionStorage cart persistence
-- **Images:** Next Image with Supabase remote image support
-- **Animation/UX:** Motion dependency, custom loaders, overlays, dropdowns, and modal components
+- **Core:** Next.js App Router, React, TypeScript
+- **Styling & Animation:** Tailwind CSS, CSS Modules, Motion
+- **Backend & Services:** Supabase Database, Supabase Auth, Supabase Storage, Next.js Route Handlers
+- **Data Fetching:** Axios, Fetch API
+- **Tooling:** npm, ESLint, PostCSS, SVGR, React Compiler
 - **Analytics:** Vercel Analytics
-- **Tooling:** ESLint 9, TypeScript 5, SVGR for SVG icons, PostCSS, React Compiler, npm
-- **Deployment:** Vercel
 
-# What I Built
+## Technical Highlights
 
-- Built the project as a full e-commerce storefront instead of a static catalog, including the home page, navigation, collections, product pages, search, cart, checkout, account, and policy routes.
-- Designed the interface around a premium collectible shopping experience: dark base styling, strong product imagery, custom typography, compact controls, responsive grids, dropdown navigation, overlays, and consistent icon-based actions.
-- Connected the product catalog to Supabase, mapped database rows into frontend product objects, and used Supabase Storage images throughout the product cards, hero section, galleries, and checkout.
+- **Server and Client Data Flow:** Server components query Supabase for home, collection, and product pages. Route handlers expose products and policies and accept newsletter subscriptions, while a shared typed mapper normalizes product rows for the UI.
 
 ![Search page screenshot](./public/screenshots/desktop_searchPage.png)
 
-- Developed the search and filtering experience with query matching, availability counts, price range filtering, sorting, result totals, and removable filter chips.
-- Built reusable UI pieces with an atomic/component structure, including buttons, inputs, chips, product cards, modals, account rows, filter controls, navigation items, and checkout sections.
-- Implemented the design-to-development process by breaking the store into repeated patterns first, then converting those patterns into reusable React components so product browsing, search results, collections, cart rows, account cards, and checkout summaries stay visually consistent.
+- **Reusable Component Architecture:** Atoms, molecules, and organisms compose shared product cards, filter controls, navigation, account modals, and checkout sections. A common policy page renders database sections ordered by their section index.
 
 ![Policies page screenshot](./public/screenshots/policies.png)
 
-- Implemented cart behavior with sessionStorage persistence, quantity controls, item removal, live cart badge updates, and a product-page added-to-cart overlay.
-- Built the checkout experience with saved address loading, manual shipping forms, country-specific shipping details, discount codes, estimated tax, billing address controls, and payment method UI.
-- Added Supabase email OTP authentication, account profile editing, saved address management, default address handling, newsletter subscription storage, and dynamic policy pages.
+- **Cart Synchronization:** Shared helpers persist cart items in sessionStorage and dispatch a custom cart-updated event, which cart views, checkout, and navigation subscribe to for updates.
+- **Client-Side Catalog Processing:** Memoized transformations match names and tags, deduplicate search suggestions, calculate availability counts, and apply price ranges and sorting to fetched catalog data.
 
 ## Getting Started
 
-Clone the project and install dependencies
+### Clone Repository
+
+```bash
+git clone https://github.com/AmirtheAmir/ace.shop.boutique.git
+cd ace.shop.boutique
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
